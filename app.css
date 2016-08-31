@@ -1,0 +1,498 @@
+/*
+Generic reset.
+*/
+.node-rect {
+	stroke: #717171;
+	stroke-width: 0;
+}
+
+.mouseover-node-rect {
+	stroke: #2EC1CC;
+	stroke-width: 0;
+	cursor: pointer;
+}
+
+.selected-node-rect {
+	stroke: #30cdd7;
+	stroke-width: 2;
+	cursor: pointer;
+}
+
+.connector-circle {
+    fill: white;
+    stroke: #ffb61c;
+    stroke-width:4;
+}
+
+.mouseover-connector-circle {
+    fill: white;
+    stroke: #717171;
+    stroke-width: 2;
+}
+
+.connection-line {
+	stroke: gray;
+	stroke-width: 3;
+	fill: transparent;
+}	
+
+.mouseover-connection-line {
+	stroke: #FFB61E;
+	stroke-width: 5;
+	fill: transparent;
+}	
+
+.selected-connection-line {
+	stroke: #E79921;
+	stroke-width: 2;
+	fill: transparent;
+}	
+
+.connection-endpoint {
+	fill: gray;
+}
+
+.selected-connection-endpoint {
+	fill: #FFB61C;
+}	
+
+.mouseover-connection-endpoint {
+	fill: #FFB61C;
+}
+
+.dragging-connection {
+	pointer-events: none;
+}
+
+.dragging-connection-line {
+	stroke: gray;
+	stroke-width: 3;
+	fill: transparent;
+}	
+
+.dragging-connection-endpoint {
+	fill: gray;
+}
+
+.draggable-container {
+	height: 1000px; 
+	width: 100%;
+}
+
+.node-name{
+	font-size:25px; 
+	text-anchor:middle; 
+	fill:#767676;
+}
+
+
+.drag-selection-rect {
+	stroke: blue;
+	stroke-width: 2;
+	fill: transparent;
+}
+
+section.workflow{
+	margin-bottom: 5px;
+}
+
+.workflow-left-pannel , .workflow-right-pannel , .workflow-middle-pannel{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.workflow-space{
+	display: inline;
+	padding: 2px;
+}
+
+.workflow-divider{
+	float: left;
+	height: 6px;
+}
+
+
+.workflow-process-btn[disabled]{
+	border: 1px solid #ccc;
+}
+
+.workflow-process-btn[disabled]:HOVER{
+	border: 1px solid #ccc;
+	cursor: not-allowed;
+}
+
+.workflow-process-btn{
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	background-color: white;
+	border: 1px solid #2EC1CC;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857;
+	border-radius: 2px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.workflow-process-btn:HOVER {
+	background-color: #E7E7E7;	
+}
+
+.data-css
+{
+	margin-left:27px;
+}
+
+.fa-workflow{
+	margin-top:5px;
+	border-color:black;
+	height: 25px;
+	width: 29px;
+	/* background-color: transparent; */
+	background-repeat: no-repeat;
+	background-image: url("images/workflow-process.png");
+}
+
+.fa-workflowImageJoin{
+	height : 30px;
+	width : 39px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url("images/workflow-process.png");
+}
+
+
+.work-menuDummy .fa-workflowImage
+{
+	padding-left:0px !important;
+	color: #575757 !important;
+	height : 30px;
+	width : 30px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url("images/workflow-process.png");
+}
+
+.work-menuDummy:hover .fa-workflowImage{
+	color: #fff !important;
+	height : 30px;
+	width : 30px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url("images/workflow-process_hover.png");
+}
+
+.fa-workflowImages{
+	height : 30px;
+	width : 30px;
+	/* background-color: transparent; */
+	background-repeat: no-repeat;
+	background-image: url("images/workflow-process.png");
+}
+
+.fa-create-variable{
+	background-position: -70px -18px;
+}
+
+.fa-workflow-rdbms{
+	background-position: -163px -71px;
+}
+
+.fa-groupby{
+	background-position: -18px -18px
+}
+
+.fa-transpose{
+	background-position: -159px -18px;
+}
+
+.fa-join{
+	background-position: -115px -18px;
+}
+
+.fa-merge{
+	background-position: -199px -21px;
+}
+
+.fa-classification{
+	background-position: -18px -68px;
+}
+
+.fa-regression{
+	background-position: -70px -68px;
+}
+
+.fa-clustering{
+	background-position: -119px -68px;
+}
+.fa-custmr{
+	background-position: -202px -118px;
+}
+.fa-custshelscript{
+	background-position: -164px -118px;
+}
+.fa-custjava{
+	background-position: -122px -118px;
+}
+.fa-custselect{
+	background-position: -72px -118px;
+}
+.fa-custapplication{
+	background-position: -23px -118px;
+}
+
+.workflow-panel-heading{
+	font-size: 14px;
+	text-transform: initial!important;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.workflow-panel-body{
+	padding-top: 10px;
+	padding-bottom: 10px;	
+}
+
+
+.mail-categories .list-group .list-group-item > a{
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+
+.canvas-holder{
+	overflow: auto; 
+	border: solid 1px #D7D7D7; 
+	width: 100%;
+}
+
+.list-group{
+	height: 237px;
+	overflow-y:auto;
+	overflow-x:hidden; 
+}
+.list-group::-webkit-scrollbar  {
+    width: 5px;
+}
+.list-group::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #ccc;
+}
+.list-group::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+.list-group::-webkit-scrollbar-thumb:hover {
+	background-color: #aaa;
+}
+
+.nodeFilterAdded{
+	padding-right: 0px;
+}
+.nodeFilterAddedPaddingRight{
+	padding-right: 15px;
+}
+
+.dataRepoAlignICon{
+	margin: 5px 15px 5px 5px;
+	border-radius: 50%;
+}	
+.padding-rightNone{
+	padding-right: 0px;	
+}
+.alignInputOutPutField{
+	word-break: break-word;
+	text-transform: capitalize;
+	cursor: pointer;
+}
+.paddingLeftRightNone{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.paddingNone{
+	padding:0px;
+}
+.BdNone{
+	border:none;
+}
+.bdBotttm{
+	border-bottom: 1px solid #e9e9e9;
+}
+.bdBotttmNone{
+	border-bottom: 0px;
+}
+.mgNone{
+	margin: 0px;
+}
+.movOpField{
+	cursor: pointer;
+}
+.fieldTypeCalculated{
+	color:#23ae89;
+}
+.rightAlign{
+	float: right;	
+}
+.alginDefault{
+	width: 14px;
+	height: 14px;
+	float: right;	
+}
+.alginFieldValue {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0px;
+}
+.pdTpBd{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.pdTpBd5{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.sample-show-hide.ng-hide {
+ 	 opacity:0;
+}
+.sample-show-hide{
+	  -webkit-transition:all linear ;
+	  transition:all linear ;
+}
+.inputOutPutFieldList{
+	max-height : 500px;
+	overflow-y : scroll;	
+	border-bottom: 1px solid #ededed;
+	
+}
+.iconDetial{
+	background-image: url("/styles/images/number_icon.png");
+	width: 14px;
+	height: 15px;	
+}
+
+.marginTop7{
+	margin-top: 7px;
+}
+.alignSaveAs {
+	display: inline;
+	margin-right: 10px;
+	margin-left: 30px;
+	float: right;
+}
+
+.marginTopRF7 {
+	margin-top: 7px;
+	margin-right: 7px;
+}
+
+.radioButtonChanges {
+	display: block !important;
+	position: absolute;
+	visibility: visible;
+	opacity: 0;
+}
+
+.paddingRightNone {
+	padding-right: 0px;
+}
+
+.overflowProcess {
+	max-height: 538px;
+	overflow-y: auto;
+}
+
+.workWrapOutPutFields {
+	word-break: break-all;
+}
+
+.expressionError {
+	color: red;
+}
+
+.nodeFilterAdded{
+	padding-right: 0px;
+}
+.nodeFilterAddedPaddingRight{
+	padding-right: 15px;
+}
+
+.dataRepoAlignICon{
+	margin: 5px 15px 5px 5px;
+	border-radius: 50%;
+}	
+.padding-rightNone{
+	padding-right: 0px;	
+}
+.alignInputOutPutField{
+	word-break: break-word;
+	cursor: pointer;
+}
+.outPutFieldAlign {
+	font-size: 11px;
+	text-transform: capitalize;
+}
+
+.paddingLeftRightNone{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.paddingNone{
+	padding:0px;
+}
+.BdNone{
+	border:none;
+}
+.bdBotttm{
+	border-bottom: 1px solid #e9e9e9;
+}
+.bdBotttmNone{
+	border-bottom: 0px;
+}
+.mgNone{
+	margin: 0px;
+}
+.movOpField{
+	cursor: pointer;
+}
+.fieldTypeCalculated{
+	color:#23ae89;
+}
+.rightAlign{
+	float: right;	
+}
+.alginDefault{
+	width: 14px;
+	height: 14px;
+	float: right;	
+}
+.alginFieldValue {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0px;
+}
+.pdTpBd{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.pdTpBd5{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.pdlfrg15{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.pdlfrgNone{
+	padding-left: 0px;
+	padding-right: 0px;
+}
